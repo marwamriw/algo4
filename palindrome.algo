@@ -1,0 +1,13 @@
+//function to test if a word palindrome 
+FUNCTION palindrome(STR:STRING) : BOOLEAN
+VAR
+    i:INTEGER;   //counter of STR
+BEGIN
+    IF  (STR[i]=1) THEN   //when str is one caractere 
+        RETURN TRUE;   // the word (STR) is palindrome
+    END_IF
+    IF (STR[i]= STR[i-1]) THEN     //compare the first caractere and the last caractere in the word(STR)
+        RETURN palindrome(STR[i,i-1])   // call the function palindrome
+        ELSE RETURN FALSE;    //the word (STR) is not palindrome
+    END_IF
+END
